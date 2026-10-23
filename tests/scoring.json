@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "weight_policy": {
+    "version": 1,
+    "basis": "business_priority",
+    "core_min_share": 0.5
+  },
+  "gate_tests": [
+    "test_outputs.py::test_output_contract_creates_three_artifacts"
+  ],
+  "tests": {
+    "test_outputs.py::test_assignment_explains_station_totals": {
+      "weight": 0.149,
+      "priority": "core",
+      "rationale": "yel-001 的未知对象恢复、领域求解和失败安全必须优先获得业务权重。"
+    },
+    "test_outputs.py::test_loss_values_are_rounded_six_places": {
+      "weight": 0.149,
+      "priority": "core",
+      "rationale": "yel-001 的未知对象恢复、领域求解和失败安全必须优先获得业务权重。"
+    },
+    "test_outputs.py::test_dispatch_over_capacity_is_refused": {
+      "weight": 0.149,
+      "priority": "core",
+      "rationale": "yel-001 的未知对象恢复、领域求解和失败安全必须优先获得业务权重。"
+    },
+    "test_outputs.py::test_refusal_preserves_existing_artifacts": {
+      "weight": 0.148,
+      "priority": "core",
+      "rationale": "yel-001 的未知对象恢复、领域求解和失败安全必须优先获得业务权重。"
+    },
+    "test_outputs.py::test_success_output_channels_are_silent": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_top_level_keys_reject_missing_field": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_unit_keys_reject_extra_field": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_station_keys_reject_missing_field": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_request_keys_reject_extra_field": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_profile_length_accepts_twelve_values": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_profile_length_rejects_eleven_values": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_duplicate_unit_identifier_is_refused": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_boolean_schema_version_is_refused": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_maximum_station_count_is_supported": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_station_count_divisibility_is_enforced": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_group_sizes_must_be_equal": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_report_bytes_end_with_newline": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_report_key_set_is_exact": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_assignment_item_key_set_is_exact": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_loss_item_key_set_is_exact": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_dispatch_item_key_set_is_exact": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_summary_key_set_is_exact": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_dispatch_rows_are_sorted_by_unit_id": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_repeated_run_keeps_report_bytes": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_repeated_run_does_not_append_ledger": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_changed_digest_appends_ledger": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_ledger_line_has_exact_keys": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_checkpoint_has_exact_keys": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_missing_key_is_refused": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_duplicate_json_key_is_refused": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    },
+    "test_outputs.py::test_refusal_uses_fixed_stderr_prefix": {
+      "weight": 0.015,
+      "priority": "supporting",
+      "rationale": "yel-001 的该结构或边界行为保护交付结果的完整性和可追溯性。"
+    }
+  }
+}
