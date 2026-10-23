@@ -107,7 +107,7 @@ def _validate(payload: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[
         if not all(_number(value) for value in profile):
             raise ValueError("profile contains a non-finite number")
         capacity = item["capacity"]
-        if not _number(capacity) or float(capacity) <= 0:
+        if not _number(capacity) or not 0 < float(capacity):
             raise ValueError("capacity must be a positive finite number")
 
     station_ids: set[str] = set()
@@ -150,10 +150,8 @@ def _fit_group(
     for unit in group:
         for index, value in enumerate(unit["profile"]):
             numeric = float(value)
-            if numeric >= 0:
-                charge[index] += numeric
-            else:
-                discharge[index] += numeric
+            charge[index] += max(numeric, 0.0)
+            discharge[index] += min(numeric, 0.0)
     base = [charge[i] + discharge[i] for i in range(profile_len)]
     residual_vector = [float(grid[i]) - base[i] for i in range(profile_len)]
     aa = sum(value * value for value in charge)
