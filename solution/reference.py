@@ -265,7 +265,7 @@ def _allocate_dispatch(
             remaining = max(0.0, remaining - amount)
         if remaining > 1e-9:
             raise ValueError("dispatch request exceeds station capacity")
-    rows.sort(key=lambda item: (item["station_id"], item["unit_id"]))
+    rows.sort(key=lambda item: item["unit_id"])
     return rows
 
 

@@ -296,10 +296,10 @@ def test_loss_values_are_rounded_six_places(tmp_path):
 def test_dispatch_rows_are_sorted_by_unit_id(tmp_path):
     """题面：「dispatch 按 unit_id 升序排列。」"""
     proc, report, output_dir = _run(_case(), tmp_path)
-    rows = [(item["station_id"], item["unit_id"]) for item in report["dispatch"]]
+    units = [item["unit_id"] for item in report["dispatch"]]
     assert proc.returncode == 0
-    assert rows == sorted(rows)
-    assert len(rows) == 12
+    assert units == sorted(units)
+    assert len(units) == 12
 
 
 def test_repeated_run_keeps_report_bytes(tmp_path):
